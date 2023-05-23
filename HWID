@@ -1,5 +1,6 @@
 return {
 	"B623CA35-E7A8-4266-82A1-9BFF2F8F336F", --Salad
+	"6E1A51B5-B7DC-4230-BD3B-16D7AF68AE6D", --Geno
 }
 
 local Blacklist {
