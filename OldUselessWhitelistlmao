@@ -1,14 +1,30 @@
-return {
-	"B623CA35-E7A8-4266-82A1-9BFF2F8F336F", --Salad hwid
-	"6E1A51B5-B7DC-4230-BD3B-16D7AF68AE6D", --Geno hwid 
-	"8338B668-D021-4B5D-90E1-6DA1D9119EBF", --SaladAlt hwid
-	"E82AB96F-E05B-40A5-9FBC-9570B2809C1A", --washed4real hwid
-}
+local plrtype, plrattackable = WhitelistFunctions:CheckPlayerType(v)
 
-local Blacklist {
+local BLACKLISTED {
 	"",
 }
 
-if Blacklist [game:GetService("RbxAnalyticsService"):GetClientId()] then
-game.Players.LocalPlayer:Kick("Lmao you're blacklisted")
+local PRIVATEUSER {
+	"E82AB96F-E05B-40A5-9FBC-9570B2809C1A", --wiz hwid
+}
+
+local DEVELOPER {
+	"B623CA35-E7A8-4266-82A1-9BFF2F8F336F",
+	"6E1A51B5-B7DC-4230-BD3B-16D7AF68AE6D",
+	"8338B668-D021-4B5D-90E1-6DA1D9119EBF",
+}
+
+if BLACKLISTED [game:GetService("RbxAnalyticsService"):GetClientId()] then
+game.Players.LocalPlayer:Kick("You're blacklisted")
 end
+
+if PRIVATEUSER [game:GetService("RbxAnalyticsService"):GetClientId()] then
+plrtype == "SALADWARE PRIVATE"
+end
+										
+		
+if DEVELOPER [game:GetService("RbxAnalyticsService"):GetClientId()] then
+plrtype == "SALADWARE DEVELOPER"
+end
+
+
