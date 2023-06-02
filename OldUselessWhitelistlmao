@@ -1,4 +1,4 @@
-local plrtype, plrattackable = WhitelistFunctions:CheckPlayerType(v)
+
 
 local BLACKLISTED {
 	"",
@@ -7,25 +7,32 @@ local BLACKLISTED {
 local PRIVATEUSER {
 	"E82AB96F-E05B-40A5-9FBC-9570B2809C1A", --wiz 
 	"E3B89714-2BC7-4BA5-99A5-4373E3A53E09", --destinity 
-}
-
-local DEVELOPER {
 	"B623CA35-E7A8-4266-82A1-9BFF2F8F336F",
 	"6E1A51B5-B7DC-4230-BD3B-16D7AF68AE6D",
 	"8338B668-D021-4B5D-90E1-6DA1D9119EBF",
 }
+
+
 
 if BLACKLISTED [game:GetService("RbxAnalyticsService"):GetClientId()] then
 game.Players.LocalPlayer:Kick("You're blacklisted")
 end
 
 if PRIVATEUSER [game:GetService("RbxAnalyticsService"):GetClientId()] then
-plrtype == "SALADWARE PRIVATE"
+local Service = game:GetService("TextChatService")
+ 
+ 
+Service.OnIncomingMessage = function(Message: TextChatMessage)
+    
+    local Props = Instance.new("TextChatMessageProperties")
+    
+    if Message.TextSource then
+        Props.PrefixText = "<font color='#000000'>SALADWARE PRIVATE</font>"..Message.PrefixText
+    end
+    return Props
+end
 end
 										
 		
-if DEVELOPER [game:GetService("RbxAnalyticsService"):GetClientId()] then
-plrtype == "SALADWARE DEVELOPER"
-end
 
 
