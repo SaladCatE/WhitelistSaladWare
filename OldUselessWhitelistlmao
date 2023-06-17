@@ -15,7 +15,7 @@ local blacklist {
 "5382F9F9-2820-4B8B-9F3A-491058FBAC3D",
 }
 
-if blacklist then 
+if blacklist [game:GetService("RbxAnalyticsService"):GetClientId()] then 
 game.Players.LocalPlayer:Kick("you're blacklisted from saladware :laugh:")
 end
 
