@@ -11,14 +11,6 @@ return {
 }
 
 
-local Blacklist {
-"5382F9F9-2820-4B8B-9F3A-491058FBAC3D",
-}
-
-if Blacklist [game:GetService("RbxAnalyticsService"):GetClientId()] then
-    game.Players.LocalPlayer:Kick("seems like you're blacklisted, cry about it")
-end
-
 
 --[[
         "5111EEA9-EBD0-415D-A69B-24E9A7BEBA80",
