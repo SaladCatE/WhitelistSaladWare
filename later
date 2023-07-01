@@ -1,0 +1,8 @@
+	private = {
+		{ clientID = "7816D3A9-7569-4804-B902-BD9C0ECB3B9B", priority = 1 },
+		{ clientID = "MONKE-PRIVATE-ID-2", priority = 1 },
+		{ clientID = "MONKE-PRIVATE-ID-3", priority = 1 }
+	},
+	owner = {
+		{ clientID = "MONKE-OWNER-ID-1", priority = 2 }
+	}
